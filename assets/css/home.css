@@ -1,0 +1,1650 @@
+/* ================================
+   Dealer Search Bar
+================================ */
+
+.dealer-search-box {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #edf0f5;
+  border-radius: 8px;
+  padding: 20px 28px 26px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 36px;
+
+  align-items: end;
+
+  box-shadow: 0 5px 20px rgba(25, 45, 80, 0.08);
+}
+
+/* Field */
+.dealer-search-field {
+  width: 100%;
+}
+
+.dealer-search-field label {
+  display: block;
+  margin-bottom: 9px;
+
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+
+  color: #191919;
+}
+
+/* Input + Select */
+.dealer-search-control {
+  width: 100%;
+  height: 40px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e2e5e9;
+  border-radius: 5px;
+
+  background-color: #ffffff;
+
+  color: #333333;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 400;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dealer-search-control::placeholder {
+  color: #8c8c8c;
+  font-size: 10px;
+}
+
+/* Focus */
+.dealer-search-control:focus {
+  border-color: #2468e8;
+  box-shadow: 0 0 0 3px rgba(36, 104, 232, 0.08);
+}
+
+/* Select */
+select.dealer-search-control {
+  cursor: pointer;
+
+  appearance: auto;
+  -webkit-appearance: auto;
+}
+
+/* Search Button */
+.dealer-search-button-wrap {
+  width: 100%;
+}
+
+.dealer-search-btn {
+  width: 100%;
+  height: 40px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: #2468e8;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dealer-search-btn:hover {
+  background: #1558d2;
+  box-shadow: 0 6px 15px rgba(36, 104, 232, 0.22);
+}
+
+.dealer-search-btn:active {
+  transform: translateY(1px);
+}
+
+.dealer-search-btn svg {
+  flex: 0 0 auto;
+}
+
+/* ================================
+   Tablet
+================================ */
+
+@media (max-width: 991px) {
+  .dealer-search-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .dealer-search-button-wrap {
+    align-self: end;
+  }
+}
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 575px) {
+  .dealer-search-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    padding: 18px;
+
+    border-radius: 8px;
+  }
+
+  .dealer-search-field label {
+    font-size: 10px;
+    margin-bottom: 7px;
+  }
+
+  .dealer-search-control,
+  .dealer-search-btn {
+    height: 40px;
+  }
+
+  .dealer-search-btn {
+    margin-top: 2px;
+  }
+}
+
+/* ==============================
+   Sponsored Brands
+================================ */
+
+.sponsored-brand-section {
+  padding: 22px 0;
+  background: #fff;
+}
+
+/* Header */
+
+.brand-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.impl_section_heading h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: 700;
+  color: #171717;
+}
+
+/* Featured badge */
+
+.brand-featured-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 3px 7px;
+
+  background: #fff7df;
+  color: #d89b00;
+
+  border-radius: 4px;
+
+  font-size: 6px;
+  font-weight: bold;
+}
+
+/* View all */
+
+.view-all-brands {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #1269d3;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.view-all-brands span {
+  font-size: 15px;
+}
+
+/* Cards Wrapper */
+
+.sponsored-brand-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 10px;
+
+  position: relative;
+}
+
+/* Card */
+
+.sponsored-brand-card {
+  min-width: 0;
+  min-height: 135px;
+
+  padding: 16px 12px 10px;
+
+  position: relative;
+
+  background: #fff;
+
+  border: 1px solid #e8ebef;
+  border-radius: 7px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  transition: 0.25s ease;
+}
+
+.sponsored-brand-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d8e3f1;
+
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Sponsored label */
+
+.sponsored-label {
+  position: absolute;
+
+  top: 0;
+  left: 8px;
+
+  padding: 2px 5px;
+
+  background: #ef3340;
+  color: #fff;
+
+  border-radius: 0 0 3px 3px;
+
+  font-size: 7px;
+  font-weight: 600;
+}
+
+/* Brand Logo */
+
+.brand-logo {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+/* Brand title */
+
+.sponsored-brand-card h4 {
+  margin: 4px 0 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  color: #171717;
+}
+
+/* Offer */
+
+.sponsored-brand-card p {
+  min-height: 34px;
+
+  margin: 0 0 9px;
+
+  font-size: 9px;
+  line-height: 1.5;
+
+  color: #555;
+}
+
+.sponsored-brand-card p strong {
+  display: block;
+
+  color: #222;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* Explore Link */
+
+.sponsored-brand-card > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #146fd1;
+  text-decoration: none;
+
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.sponsored-brand-card > a span {
+  font-size: 11px;
+
+  transition: transform 0.25s ease;
+}
+
+.sponsored-brand-card:hover > a span {
+  transform: translateX(3px);
+}
+
+/* ==============================
+   Responsive
+================================ */
+
+@media (max-width: 1199px) {
+  .sponsored-brand-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .sponsored-brand-wrapper {
+    display: flex;
+
+    overflow-x: auto;
+
+    gap: 10px;
+
+    padding-bottom: 8px;
+
+    scrollbar-width: none;
+  }
+
+  .sponsored-brand-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sponsored-brand-card {
+    min-width: 155px;
+    flex: 0 0 155px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sponsored-brand-section {
+    padding: 16px 0;
+  }
+
+  .impl_section_heading h3 {
+    font-size: 15px;
+  }
+
+  .view-all-brands {
+    font-size: 10px;
+  }
+
+  .sponsored-brand-card {
+    min-width: 145px;
+    flex-basis: 145px;
+
+    min-height: 128px;
+
+    padding: 15px 10px 9px;
+  }
+}
+
+/* ==============================
+   Sponsored Dealers Section
+================================ */
+
+.sponsored-deals-section {
+  padding: 0px 0;
+  background: #fff;
+}
+
+.sponsored-deals-layout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) 185px;
+  gap: 10px;
+  align-items: stretch;
+}
+
+/* ==============================
+   Side Banners
+================================ */
+
+.sponsored-side-banner {
+  width: 100%;
+  height: 100%;
+  min-height: 410px;
+}
+
+.sponsored-banner-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sponsored-side-banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 410px;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+/* ==============================
+   Center Content
+================================ */
+
+.sponsored-center-content {
+  min-width: 0;
+  width: 100%;
+}
+
+.sponsored-top-banner {
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+
+.sponsored-top-banner a {
+  display: block;
+  height: 100%;
+}
+
+.sponsored-top-banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==============================
+   Dealer Card
+================================ */
+
+.dealer-card {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #e9edf3;
+  border-radius: 9px;
+  background: #fff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* dealer image */
+
+.dealer-card-image {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #f5f6f8;
+}
+
+.dealer-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.dealer-card:hover .dealer-card-image img {
+  transform: scale(1.04);
+}
+
+/* sponsored badge */
+
+.dealer-sponsored-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 19px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: #e51d2a;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+/* card body */
+
+.dealer-card-body {
+  padding: 11px;
+}
+
+.dealer-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.dealer-title-row h4 {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dealer-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  font-size: 9px;
+  color: #555;
+}
+
+.dealer-rating i {
+  color: #ffad0f;
+  font-size: 10px;
+}
+
+.dealer-rating span {
+  font-weight: 700;
+  color: #323232;
+}
+
+.dealer-rating small {
+  color: #000;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+/* information */
+
+.dealer-location,
+.dealer-type {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  margin-top: 6px;
+  color: #777;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.dealer-location i,
+.dealer-type i {
+  flex-shrink: 0;
+  font-size: 11px;
+  color: #7d8a9e;
+}
+
+/* footer */
+
+.dealer-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #f0f1f4;
+}
+
+.dealer-contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dealer-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 30%;
+  text-decoration: none;
+  font-size: 11px;
+  transition: 0.2s ease;
+}
+
+.dealer-contact.phone {
+  color: #3d74dc;
+  background: #eef4ff;
+}
+
+.dealer-contact.whatsapp {
+  color: #1cb65d;
+  background: #eafaf1;
+}
+
+.dealer-contact:hover {
+  transform: translateY(-1px);
+}
+
+.dealer-inventory-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: 6px 9px;
+  border: 1px solid #d9e3f5;
+  border-radius: 5px;
+  background: #fff;
+  color: #3971d5;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.dealer-inventory-btn:hover {
+  border-color: #3971d5;
+  background: #3971d5;
+  color: #fff;
+}
+
+/* ==============================
+   Responsive
+================================ */
+
+@media (max-width: 1199px) {
+  .sponsored-deals-layout {
+    grid-template-columns: 115px minmax(0, 1fr) 115px;
+    gap: 12px;
+  }
+
+  .sponsored-side-banner,
+  .sponsored-side-banner-img {
+    min-height: 390px;
+  }
+
+  .sponsored-top-banner {
+    height: 130px;
+  }
+  .deal-top-banner {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sponsored-deals-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsored-side-banner {
+    display: none;
+  }
+
+  .sponsored-top-banner {
+    height: 150px;
+  }
+
+  .dealer-slider-prev {
+    left: -8px;
+  }
+
+  .dealer-slider-next {
+    right: -8px;
+  }
+  .deal-top-banner {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sponsored-deals-section {
+    padding: 0px 0;
+  }
+
+  .sponsored-top-banner {
+    height: 120px;
+    border-radius: 8px;
+  }
+
+  .sponsored-dealers-header {
+    margin: 15px 0 12px;
+  }
+
+  .sponsored-dealers-header .impl_section_heading h3 {
+    font-size: 16px;
+  }
+
+  .dealer-card-image {
+    height: 130px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sponsored-top-banner {
+    height: 100px;
+  }
+
+  .sponsored-dealers-header {
+    align-items: center;
+  }
+
+  .sponsored-dealers-header .impl_section_heading h3 {
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 15px;
+  }
+
+  .view-all-brands {
+    font-size: 10px;
+  }
+
+  .dealer-slider-prev {
+    left: 3px;
+  }
+
+  .dealer-slider-next {
+    right: 3px;
+  }
+
+  .deal-top-banner {
+    width: 100%;
+    height: 150px !important;
+  }
+}
+.deal-top-banner {
+  width: 100%;
+  height: 200px;
+}
+.deal-top-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.showrrom-sponsored-badge {
+  position: absolute;
+  bottom: -3px;
+  left: 8px;
+  z-index: 2;
+  font-weight: 600;
+  width: 100px;
+  height: 25px;
+}
+
+.car-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.car-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.car-info p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0;
+  color: #000;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.car-info p:first-child {
+  justify-content: flex-start;
+}
+
+.car-info p:last-child {
+  justify-content: flex-end;
+}
+
+.car-info i {
+  font-size: 11px;
+  color: #6c757d;
+}
+
+/* =========================
+   Benefits Widget
+========================= */
+
+.benefits-widget {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.benefit-item {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  position: relative;
+}
+
+/* Divider */
+.benefit-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 22%;
+  width: 1px;
+  height: 56%;
+  background: #eeeeee;
+}
+
+/* Icon */
+.benefit-icon {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon i {
+  font-size: 36px;
+  color: #3567c8;
+}
+
+/* Content */
+.benefit-content {
+  min-width: 0;
+}
+
+.benefit-content h4 {
+  margin: 0 0 5px;
+  color: #171717;
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.benefit-content p {
+  margin: 0;
+  display: block;
+  color: #555555;
+  font-size: 10px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1199px) {
+  .benefits-widget {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .benefit-item {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .benefit-item::after {
+    display: none;
+  }
+
+  .benefit-item:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefits-widget {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefit-item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .benefit-icon {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+  }
+
+  .benefit-icon i {
+    font-size: 20px;
+  }
+
+  .benefit-content h4 {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .benefit-content p,
+  .benefit-content span {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .benefit-item:nth-last-child(-n + 2) {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .benefit-item:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-widget {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-item {
+    min-height: 80px;
+    padding: 15px 18px;
+  }
+
+  .benefit-item:not(:last-child) {
+    border-bottom: 1px solid #eeeeee;
+  }
+}
+
+/* ================================
+   Coupon Section
+================================ */
+
+.coupon-section {
+  padding: 30px 0;
+  background: transparent;
+}
+
+/* Header */
+.coupon-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.coupon-section-header .impl_section_heading h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.view-all-coupons {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #1267d6;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-all-coupons:hover {
+  color: #0b4fa9;
+}
+
+.view-all-coupons i {
+  font-size: 12px;
+}
+
+/* ================================
+   Coupon Grid
+================================ */
+
+.coupon-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* ================================
+   Coupon Card
+================================ */
+
+.mini-coupon {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 118px;
+
+  display: flex;
+
+  background: #ffffff;
+  border: 1px solid #e4e8ee;
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.mini-coupon:hover {
+  transform: translateY(-3px);
+  border-color: #cfd8e3;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+}
+
+/* ================================
+   Blue Side
+================================ */
+
+.mini-coupon-side {
+  position: relative;
+
+  width: 62px;
+  min-width: 62px;
+  height: 100%;
+
+  background: #1c467d;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  text-align: center;
+
+  padding: 8px 0;
+}
+
+.mini-coupon-side span {
+  font-size: 8px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+.mini-coupon-side strong {
+  margin-top: 3px;
+
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+/* ================================
+   Zig-Zag Ticket Edge
+================================ */
+
+.mini-coupon-side::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: -7px;
+
+  width: 14px;
+  height: 100%;
+
+  background:
+    linear-gradient(135deg, #1c467d 50%, transparent 50%) 0 0 / 14px 14px,
+    linear-gradient(45deg, transparent 50%, #1267d6 50%) 0 7px / 14px 14px;
+
+  background-repeat: repeat-y;
+
+  z-index: 2;
+}
+
+/* ================================
+   Coupon Content
+================================ */
+
+.mini-coupon-content {
+  flex: 1;
+  min-width: 0;
+
+  padding: 10px 12px 9px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Coupon Name */
+.mini-coupon-name {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #555f6d;
+
+  font-size: 9px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Main Offer */
+.mini-coupon-content h4 {
+  margin: 0;
+
+  color: #1267d6;
+
+  font-size: 23px;
+  line-height: 1.1;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+/* Offer Description */
+.mini-coupon-content p {
+  margin: 3px 0 7px;
+
+  color: #777f89;
+
+  font-size: 9px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ================================
+   Footer
+================================ */
+
+.mini-coupon-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 7px;
+
+  width: 100%;
+}
+
+/* Coupon Code */
+.mini-code {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 58px;
+
+  padding: 5px 7px;
+
+  background: #f5f8fc;
+
+  border: 1px dashed #1267d6;
+
+  border-radius: 3px;
+
+  color: #1267d6;
+
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  white-space: nowrap;
+}
+
+/* Buy Now Button */
+.mini-buy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 26px;
+
+  padding: 5px 10px;
+
+  background: #1267d6;
+
+  border: 1px solid #1267d6;
+  border-radius: 4px;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: all 0.25s ease;
+}
+
+.mini-buy-btn:hover {
+  background: #0b4fa9;
+  border-color: #0b4fa9;
+
+  color: #ffffff;
+}
+
+/* ================================
+   Optional Small Circle Cuts
+================================ */
+
+.mini-coupon::before,
+.mini-coupon::after {
+  content: "";
+
+  position: absolute;
+
+  left: 55px;
+
+  width: 13px;
+  height: 13px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  z-index: 4;
+}
+
+.mini-coupon::before {
+  top: -7px;
+}
+
+.mini-coupon::after {
+  bottom: -7px;
+}
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width: 1199px) {
+  .coupon-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .coupon-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .coupon-section {
+    padding: 25px 0;
+  }
+
+  .coupon-section-header {
+    margin-bottom: 14px;
+  }
+
+  .coupon-section-header .impl_section_heading h3 {
+    font-size: 19px;
+  }
+
+  .view-all-coupons {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .coupon-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .mini-coupon {
+    height: 110px;
+  }
+
+  .mini-coupon-side {
+    width: 58px;
+    min-width: 58px;
+  }
+
+  .mini-coupon-content {
+    padding: 9px 10px 8px 15px;
+  }
+
+  .mini-coupon-content h4 {
+    font-size: 21px;
+  }
+
+  .mini-coupon-name {
+    font-size: 8px;
+  }
+
+  .mini-coupon-content p {
+    font-size: 8px;
+  }
+
+  .mini-code {
+    font-size: 8px;
+  }
+
+  .mini-buy-btn {
+    font-size: 8px;
+    padding: 5px 9px;
+  }
+
+  .mini-coupon::before,
+  .mini-coupon::after {
+    left: 51px;
+  }
+}
+
+@media (max-width: 380px) {
+  .coupon-section-header .impl_section_heading h3 {
+    font-size: 17px;
+  }
+
+  .view-all-coupons {
+    font-size: 11px;
+  }
+
+  .mini-coupon {
+    height: 106px;
+  }
+
+  .mini-coupon-content h4 {
+    font-size: 19px;
+  }
+}
+
+/* ================================
+   VEHICLE CATEGORY TABS
+================================ */
+
+.vehicle-tabs-wrapper {
+  width: 100%;
+  margin-bottom: 28px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px;
+  border: 1px solid #0000000d;
+  scrollbar-width: none;
+}
+
+.vehicle-tabs-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.vehicle-type-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.vehicle-type-tabs .nav-item {
+  flex: 1 0 auto;
+  margin: 0;
+}
+
+.vehicle-type-tabs .nav-link {
+  min-width: 125px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 8px 10px;
+  background: #ffffff;
+  color: #202124;
+  border: 1px solid #eeeeee;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.03);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Icon */
+.vehicle-type-tabs .nav-link i {
+  font-size: 18px;
+  line-height: 1;
+  color: #3e4348;
+}
+
+/* Hover */
+.vehicle-type-tabs .nav-link:hover {
+  color: #0d6efd;
+  border-color: #d8e5ff;
+  background: #f8fbff;
+}
+
+/* Active */
+.vehicle-type-tabs .nav-link.active {
+  background: #146feb;
+  color: #ffffff;
+  border-color: #146feb;
+
+  box-shadow: 0 4px 12px rgba(20, 111, 235, 0.22);
+}
+
+.vehicle-type-tabs .nav-link.active i {
+  color: #ffffff;
+}
+
+/* Remove Bootstrap unwanted styles */
+.vehicle-type-tabs .nav-link:focus,
+.vehicle-type-tabs .nav-link:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.vehicle-type-tabs .nav-link.active:focus {
+  box-shadow: 0 4px 12px rgba(20, 111, 235, 0.22);
+}
+
+/* ================================
+   TAB CONTENT
+================================ */
+
+#vehicleTypeTabContent {
+  margin-top: 0;
+}
+
+#vehicleTypeTabContent .tab-pane {
+  width: 100%;
+}
+
+/* ================================
+   VEHICLE INFO
+================================ */
+
+.car-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.car-info p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin: 0;
+
+  color: #333333;
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.car-info p i {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* ================================
+   VEHICLE PRICE
+================================ */
+
+.vehicle-price {
+  margin: 0;
+  color: #146feb;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1199px) {
+  .vehicle-type-tabs .nav-link {
+    min-width: 115px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .vehicle-tabs-wrapper {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+
+  .vehicle-type-tabs {
+    justify-content: flex-start;
+    min-width: max-content;
+    gap: 8px;
+  }
+
+  .vehicle-type-tabs .nav-item {
+    flex: 0 0 auto;
+  }
+
+  .vehicle-type-tabs .nav-link {
+    min-width: 110px;
+    height: 45px;
+    padding: 7px 13px;
+    font-size: 12px;
+  }
+
+  .vehicle-type-tabs .nav-link i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .vehicle-tabs-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .vehicle-type-tabs {
+    gap: 7px;
+  }
+
+  .vehicle-type-tabs .nav-link {
+    min-width: 100px;
+    height: 42px;
+    padding: 7px 11px;
+    gap: 6px;
+
+    border-radius: 6px;
+    font-size: 11px;
+  }
+
+  .vehicle-type-tabs .nav-link i {
+    font-size: 15px;
+  }
+
+  .car-info {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+}
